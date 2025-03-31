@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il Mio Sito Personale</title>
+  <!-- CSS interno per lo stile del sito -->
+  <style>
+    /* Impostazioni globali */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+    
+    /* Sfondo dell'intera pagina */
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Barra di navigazione fissa in alto */
+    nav {
+      background: rgba(255, 255, 255, 0.9);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 10px 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      list-style: none;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #007BFF;
+    }
+
+    /* Spazio iniziale per non nascondere i contenuti sotto il nav fisso */
+    .spacer {
+      height: 60px;
+    }
+
+    /* Sezione principale */
+    header {
+      text-align: center;
+      padding: 100px 20px 50px;
+      background: rgba(255, 255, 255, 0.8);
+      margin: 20px;
+      border-radius: 8px;
+    }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+
+    /* Stile delle sezioni */
+    section {
+      padding: 60px 20px;
+      margin: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+    /* Riquadri interni alle sezioni */
+    .box-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .box {
+      background: #f4f4f4;
+      padding: 20px;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+    /* Sezione shop (opzionale) */
+    .shop-item {
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      transition: box-shadow 0.3s;
+    }
+    .shop-item:hover {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .shop-item img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .shop-item h3 {
+      margin: 10px 0;
+    }
+    .shop-item button {
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .shop-item button:hover {
+      background: #0056b3;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .box-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra di navigazione -->
+  <nav>
+    <ul>
+      <li><a href="#chi-sono">Chi sono</a></li>
+      <li><a href="#disegni">I miei disegni</a></li>
+      <li><a href="#blog">Il mio blog</a></li>
+      <li><a href="#shop">Shop</a></li>
+    </ul>
+  </nav>
+
+  <!-- Spazio per evitare che il nav fisso copra il contenuto -->
+  <div class="spacer"></div>
+
+  <!-- Header con titolo principale e sottotitolo -->
+  <header id="home">
+    <h1>Benvenuto nel mio sito personale</h1>
+    <p>Esplora i miei progetti, disegni e pensieri.</p>
+  </header>
+
+  <!-- Sezione "Chi sono" -->
+  <section id="chi-sono">
+    <h2>Chi sono</h2>
+    <p>Questa sezione contiene informazioni personali e il mio percorso professionale. Puoi modificare questo testo per raccontare la tua storia.</p>
+  </section>
+
+  <!-- Sezione "I miei disegni" con riquadri per ogni disegno -->
+  <section id="disegni">
+    <h2>I miei disegni</h2>
+    <div class="box-container">
+      <div class="box">
+        <h3>Disegno 1</h3>
+        <p>Descrizione del disegno 1.</p>
+      </div>
+      <div class="box">
+        <h3>Disegno 2</h3>
+        <p>Descrizione del disegno 2.</p>
+      </div>
+      <div class="box">
+        <h3>Disegno 3</h3>
+        <p>Descrizione del disegno 3.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sezione "Il mio blog" -->
+  <section id="blog">
+    <h2>Il mio blog</h2>
+    <p>Qui puoi inserire i tuoi articoli, pensieri e aggiornamenti. Ogni nuovo post può essere aggiunto come nuovo box o paragrafo.</p>
+  </section>
+
+  <!-- Sezione "Shop" opzionale -->
+  <section id="shop">
+    <h2>Shop</h2>
+    <div class="box-container">
+      <div class="shop-item">
+        <img src="prodotto1.jpg" alt="Prodotto 1">
+        <h3>Prodotto 1</h3>
+        <p>Descrizione del prodotto 1.</p>
+        <button>Aggiungi al carrello</button>
+      </div>
+      <div class="shop-item">
+        <img src="prodotto2.jpg" alt="Prodotto 2">
+        <h3>Prodotto 2</h3>
+        <p>Descrizione del prodotto 2.</p>
+        <button>Aggiungi al carrello</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 20px; background: rgba(255, 255, 255, 0.9); margin: 20px; border-radius: 8px;">
+    <p>&copy; 2025 Il Mio Sito Personale. Tutti i diritti riservati.</p>
+  </footer>
+</body>
+</html>
