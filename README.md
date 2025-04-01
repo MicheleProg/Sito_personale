@@ -1,1 +1,1 @@
-This is a HTML code for a personal website
+This is a HTML code for a personal website.
